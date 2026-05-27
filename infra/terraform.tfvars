@@ -14,4 +14,5 @@ node_volume_size            = 20
 node_desired                = 1
 node_min                    = 1
 node_max                    = 2
+eks_endpoint_public_access  = true
 eks_endpoint_private_access = true
