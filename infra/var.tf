@@ -1,41 +1,41 @@
 variable "infra_env" {
   description = "Provide AWS deployment environment"
-  type = string
+  type        = string
 }
 
 variable "app_name" {
   description = "Provide the AWS infrastructure deployment name to be used as the resource name"
-  type = string
+  type        = string
 }
 
 variable "vpc_cidr_block" {
   description = "Provide the VPC CIDR block to isolate the environment"
-  type = string
+  type        = string
 }
 
 variable "public_subnet_cidr_1" {
   description = "Provide the CIDR block for public subnet 1"
-  type = string
+  type        = string
 }
 
 variable "public_subnet_cidr_2" {
   description = "Provide the CIDR block for public subnet 2"
-  type = string
+  type        = string
 }
 
 variable "private_subnet_cidr_1" {
   description = "Provide the CIDR block for private subnet 1"
-  type = string
+  type        = string
 }
 
 variable "private_subnet_cidr_2" {
   description = "Provide the CIDR block for private subnet 2"
-  type = string
+  type        = string
 }
 
 variable "eks_version" {
   description = "Provide the EKS cluster version"
-  type = string
+  type        = string
 }
 
 # variable "ami_id" {
@@ -126,7 +126,7 @@ variable "spot_max_size" {
 }
 
 variable "node_labels" {
-  type    = map(string)
+  type = map(string)
   default = {
     role = "worker"
     env  = "poc2"
@@ -146,5 +146,5 @@ variable "enable_kms" {
 variable "eks_endpoint_private_access" {
   description = "Enable private access to EKS API server"
   type        = bool
-   default = false
+  default     = false
 }
